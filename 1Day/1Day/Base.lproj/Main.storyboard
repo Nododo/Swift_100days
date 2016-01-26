@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gzd-OG-i3Z">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbD-60-p10">
+                                <rect key="frame" x="261" y="435" width="80" height="30"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Tap or Hold"/>
+                                <connections>
+                                    <action selector="tapToChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMy-LN-duo"/>
+                                    <outletCollection property="gestureRecognizers" destination="ld1-Cf-x0B" appends="YES" id="eEN-lM-Ql5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEk-EW-xE2">
+                                <rect key="frame" x="250" y="225" width="100" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5ap-FQ-Eq5"/>
+                                    <constraint firstAttribute="height" constant="150" id="ePR-Us-Uab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QbD-60-p10" firstAttribute="top" secondItem="nEk-EW-xE2" secondAttribute="bottom" constant="60" id="68c-cC-sDN"/>
+                            <constraint firstItem="nEk-EW-xE2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZ9-p7-CkQ"/>
+                            <constraint firstItem="nEk-EW-xE2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lob-l7-4Md"/>
+                            <constraint firstItem="QbD-60-p10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vPS-1w-TJz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3PH-OR-DNd">
+                        <barButtonItem key="leftBarButtonItem" title="Reset" id="9HQ-80-ifh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="numLabel" destination="nEk-EW-xE2" id="NiF-OS-DMI"/>
+                        <outlet property="reste" destination="9HQ-80-ifh" id="Wes-dz-VMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="ld1-Cf-x0B">
+                    <connections>
+                        <action selector="longPress:" destination="BYZ-38-t0r" id="4l1-0G-uT5"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1057" y="305"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bhg-Dy-Xdy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gzd-OG-i3Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mkH-Qi-EXz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uMY-Xv-uFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEo-VT-ugN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="-387"/>
+        </scene>
+    </scenes>
+</document>

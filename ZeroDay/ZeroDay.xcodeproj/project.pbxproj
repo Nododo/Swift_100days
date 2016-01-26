@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F36A04A1C5615B80029CF29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36A0491C5615B80029CF29 /* AppDelegate.swift */; };
+		1F36A04C1C5615B80029CF29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36A04B1C5615B80029CF29 /* ViewController.swift */; };
+		1F36A04F1C5615B80029CF29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F36A04D1C5615B80029CF29 /* Main.storyboard */; };
+		1F36A0511C5615B80029CF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F36A0501C5615B80029CF29 /* Assets.xcassets */; };
+		1F36A0541C5615B80029CF29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F36A0521C5615B80029CF29 /* LaunchScreen.storyboard */; };
+		1F36A05F1C5615B80029CF29 /* ZeroDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36A05E1C5615B80029CF29 /* ZeroDayTests.swift */; };
+		1F36A06A1C5615B80029CF29 /* ZeroDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36A0691C5615B80029CF29 /* ZeroDayUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F36A05B1C5615B80029CF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F36A03E1C5615B80029CF29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F36A0451C5615B80029CF29;
+			remoteInfo = ZeroDay;
+		};
+		1F36A0661C5615B80029CF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F36A03E1C5615B80029CF29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F36A0451C5615B80029CF29;
+			remoteInfo = ZeroDay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F36A0461C5615B80029CF29 /* ZeroDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36A0491C5615B80029CF29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F36A04B1C5615B80029CF29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F36A04E1C5615B80029CF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F36A0501C5615B80029CF29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F36A0531C5615B80029CF29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F36A0551C5615B80029CF29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F36A05A1C5615B80029CF29 /* ZeroDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36A05E1C5615B80029CF29 /* ZeroDayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroDayTests.swift; sourceTree = "<group>"; };
+		1F36A0601C5615B80029CF29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F36A0651C5615B80029CF29 /* ZeroDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36A0691C5615B80029CF29 /* ZeroDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroDayUITests.swift; sourceTree = "<group>"; };
+		1F36A06B1C5615B80029CF29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F36A0431C5615B80029CF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0571C5615B80029CF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0621C5615B80029CF29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F36A03D1C5615B80029CF29 = {
+			isa = PBXGroup;
+			children = (
+				1F36A0481C5615B80029CF29 /* ZeroDay */,
+				1F36A05D1C5615B80029CF29 /* ZeroDayTests */,
+				1F36A0681C5615B80029CF29 /* ZeroDayUITests */,
+				1F36A0471C5615B80029CF29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F36A0471C5615B80029CF29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F36A0461C5615B80029CF29 /* ZeroDay.app */,
+				1F36A05A1C5615B80029CF29 /* ZeroDayTests.xctest */,
+				1F36A0651C5615B80029CF29 /* ZeroDayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F36A0481C5615B80029CF29 /* ZeroDay */ = {
+			isa = PBXGroup;
+			children = (
+				1F36A0491C5615B80029CF29 /* AppDelegate.swift */,
+				1F36A04B1C5615B80029CF29 /* ViewController.swift */,
+				1F36A04D1C5615B80029CF29 /* Main.storyboard */,
+				1F36A0501C5615B80029CF29 /* Assets.xcassets */,
+				1F36A0521C5615B80029CF29 /* LaunchScreen.storyboard */,
+				1F36A0551C5615B80029CF29 /* Info.plist */,
+			);
+			path = ZeroDay;
+			sourceTree = "<group>";
+		};
+		1F36A05D1C5615B80029CF29 /* ZeroDayTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F36A05E1C5615B80029CF29 /* ZeroDayTests.swift */,
+				1F36A0601C5615B80029CF29 /* Info.plist */,
+			);
+			path = ZeroDayTests;
+			sourceTree = "<group>";
+		};
+		1F36A0681C5615B80029CF29 /* ZeroDayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F36A0691C5615B80029CF29 /* ZeroDayUITests.swift */,
+				1F36A06B1C5615B80029CF29 /* Info.plist */,
+			);
+			path = ZeroDayUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F36A0451C5615B80029CF29 /* ZeroDay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F36A06E1C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDay" */;
+			buildPhases = (
+				1F36A0421C5615B80029CF29 /* Sources */,
+				1F36A0431C5615B80029CF29 /* Frameworks */,
+				1F36A0441C5615B80029CF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeroDay;
+			productName = ZeroDay;
+			productReference = 1F36A0461C5615B80029CF29 /* ZeroDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F36A0591C5615B80029CF29 /* ZeroDayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F36A0711C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDayTests" */;
+			buildPhases = (
+				1F36A0561C5615B80029CF29 /* Sources */,
+				1F36A0571C5615B80029CF29 /* Frameworks */,
+				1F36A0581C5615B80029CF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F36A05C1C5615B80029CF29 /* PBXTargetDependency */,
+			);
+			name = ZeroDayTests;
+			productName = ZeroDayTests;
+			productReference = 1F36A05A1C5615B80029CF29 /* ZeroDayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F36A0641C5615B80029CF29 /* ZeroDayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F36A0741C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDayUITests" */;
+			buildPhases = (
+				1F36A0611C5615B80029CF29 /* Sources */,
+				1F36A0621C5615B80029CF29 /* Frameworks */,
+				1F36A0631C5615B80029CF29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F36A0671C5615B80029CF29 /* PBXTargetDependency */,
+			);
+			name = ZeroDayUITests;
+			productName = ZeroDayUITests;
+			productReference = 1F36A0651C5615B80029CF29 /* ZeroDayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F36A03E1C5615B80029CF29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Nododo;
+				TargetAttributes = {
+					1F36A0451C5615B80029CF29 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 7Z2QV3RWN7;
+					};
+					1F36A0591C5615B80029CF29 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1F36A0451C5615B80029CF29;
+					};
+					1F36A0641C5615B80029CF29 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1F36A0451C5615B80029CF29;
+					};
+				};
+			};
+			buildConfigurationList = 1F36A0411C5615B80029CF29 /* Build configuration list for PBXProject "ZeroDay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F36A03D1C5615B80029CF29;
+			productRefGroup = 1F36A0471C5615B80029CF29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F36A0451C5615B80029CF29 /* ZeroDay */,
+				1F36A0591C5615B80029CF29 /* ZeroDayTests */,
+				1F36A0641C5615B80029CF29 /* ZeroDayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F36A0441C5615B80029CF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36A0541C5615B80029CF29 /* LaunchScreen.storyboard in Resources */,
+				1F36A0511C5615B80029CF29 /* Assets.xcassets in Resources */,
+				1F36A04F1C5615B80029CF29 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0581C5615B80029CF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0631C5615B80029CF29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F36A0421C5615B80029CF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36A04C1C5615B80029CF29 /* ViewController.swift in Sources */,
+				1F36A04A1C5615B80029CF29 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0561C5615B80029CF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36A05F1C5615B80029CF29 /* ZeroDayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F36A0611C5615B80029CF29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36A06A1C5615B80029CF29 /* ZeroDayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F36A05C1C5615B80029CF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F36A0451C5615B80029CF29 /* ZeroDay */;
+			targetProxy = 1F36A05B1C5615B80029CF29 /* PBXContainerItemProxy */;
+		};
+		1F36A0671C5615B80029CF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F36A0451C5615B80029CF29 /* ZeroDay */;
+			targetProxy = 1F36A0661C5615B80029CF29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F36A04D1C5615B80029CF29 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F36A04E1C5615B80029CF29 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F36A0521C5615B80029CF29 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F36A0531C5615B80029CF29 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F36A06C1C5615B80029CF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F36A06D1C5615B80029CF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F36A06F1C5615B80029CF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoding Wu (JZ7NJQ4SRK)";
+				INFOPLIST_FILE = ZeroDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroDay.www;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F36A0701C5615B80029CF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaoding Wu (JZ7NJQ4SRK)";
+				INFOPLIST_FILE = ZeroDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeroDay.www;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F36A0721C5615B80029CF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZeroDayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VALVE.www.ZeroDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeroDay.app/ZeroDay";
+			};
+			name = Debug;
+		};
+		1F36A0731C5615B80029CF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZeroDayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VALVE.www.ZeroDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeroDay.app/ZeroDay";
+			};
+			name = Release;
+		};
+		1F36A0751C5615B80029CF29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZeroDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VALVE.www.ZeroDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZeroDay;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1F36A0761C5615B80029CF29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZeroDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.VALVE.www.ZeroDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZeroDay;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F36A0411C5615B80029CF29 /* Build configuration list for PBXProject "ZeroDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F36A06C1C5615B80029CF29 /* Debug */,
+				1F36A06D1C5615B80029CF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F36A06E1C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F36A06F1C5615B80029CF29 /* Debug */,
+				1F36A0701C5615B80029CF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F36A0711C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F36A0721C5615B80029CF29 /* Debug */,
+				1F36A0731C5615B80029CF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F36A0741C5615B80029CF29 /* Build configuration list for PBXNativeTarget "ZeroDayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F36A0751C5615B80029CF29 /* Debug */,
+				1F36A0761C5615B80029CF29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F36A03E1C5615B80029CF29 /* Project object */;
+}
