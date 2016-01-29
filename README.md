@@ -5,3 +5,4 @@
 [新浪微博:@杜维欣_](http://weibo.com/u/2386823145/home?topnav=1&wvr=6)
 # Note:
 ### 1. PROJECT 11 is completed in 4Day(so 10Day == PROJECT 12 - ADD NEW ITEM)
+### 2. waring: Annual Meeting，So See You next week~
