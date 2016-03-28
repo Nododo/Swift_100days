@@ -10,11 +10,13 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
     var photoView: UIImageView!
+    var photoName: String!
     override init(frame: CGRect) {
         super.init(frame: frame)
         let photoView = UIImageView.init(frame: self.bounds)
         self.contentView.addSubview(photoView)
         self.photoView = photoView
+        self.photoName = ""
     }
 
     required init?(coder aDecoder: NSCoder) {

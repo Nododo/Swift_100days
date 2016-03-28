@@ -24,6 +24,9 @@
 		9D724AAF1CA82A4E005D6C06 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D724AA61CA82A4E005D6C06 /* 7.png */; };
 		9D724AB01CA82A4E005D6C06 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D724AA71CA82A4E005D6C06 /* 8.png */; };
 		9D724AB11CA82A4E005D6C06 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D724AA81CA82A4E005D6C06 /* 9.png */; };
+		9DFDCFFA1CA96C9D00010721 /* bg-nav-side.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDCFF91CA96C9D00010721 /* bg-nav-side.png */; };
+		9DFDCFFC1CA96E3B00010721 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDCFFB1CA96E3B00010721 /* DetailViewController.swift */; };
+		9DFDD0021CA9792800010721 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9DFDD0011CA9792800010721 /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		9D724AA61CA82A4E005D6C06 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		9D724AA71CA82A4E005D6C06 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		9D724AA81CA82A4E005D6C06 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		9DFDCFF91CA96C9D00010721 /* bg-nav-side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-nav-side.png"; sourceTree = "<group>"; };
+		9DFDCFFB1CA96E3B00010721 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9DFDD0011CA9792800010721 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,9 @@
 			children = (
 				9D724A681CA818D3005D6C06 /* AppDelegate.swift */,
 				9D724A6A1CA818D3005D6C06 /* ViewController.swift */,
-				9D724A6C1CA818D3005D6C06 /* Main.storyboard */,
 				9D724A961CA81A1D005D6C06 /* CustomCollectionViewCell.swift */,
+				9DFDCFFB1CA96E3B00010721 /* DetailViewController.swift */,
+				9D724A6C1CA818D3005D6C06 /* Main.storyboard */,
 				9D724AA01CA82A4E005D6C06 /* 1.png */,
 				9D724AA11CA82A4E005D6C06 /* 2.png */,
 				9D724AA21CA82A4E005D6C06 /* 3.png */,
@@ -130,6 +137,8 @@
 				9D724AA61CA82A4E005D6C06 /* 7.png */,
 				9D724AA71CA82A4E005D6C06 /* 8.png */,
 				9D724AA81CA82A4E005D6C06 /* 9.png */,
+				9DFDD0011CA9792800010721 /* back.png */,
+				9DFDCFF91CA96C9D00010721 /* bg-nav-side.png */,
 				9D724A6F1CA818D3005D6C06 /* Assets.xcassets */,
 				9D724A711CA818D3005D6C06 /* LaunchScreen.storyboard */,
 				9D724A741CA818D3005D6C06 /* Info.plist */,
@@ -266,12 +275,14 @@
 				9D724A731CA818D3005D6C06 /* LaunchScreen.storyboard in Resources */,
 				9D724AAC1CA82A4E005D6C06 /* 4.png in Resources */,
 				9D724AA91CA82A4E005D6C06 /* 1.png in Resources */,
+				9DFDD0021CA9792800010721 /* back.png in Resources */,
 				9D724AAE1CA82A4E005D6C06 /* 6.png in Resources */,
 				9D724AAA1CA82A4E005D6C06 /* 2.png in Resources */,
 				9D724AAB1CA82A4E005D6C06 /* 3.png in Resources */,
 				9D724AAD1CA82A4E005D6C06 /* 5.png in Resources */,
 				9D724AAF1CA82A4E005D6C06 /* 7.png in Resources */,
 				9D724AB11CA82A4E005D6C06 /* 9.png in Resources */,
+				9DFDCFFA1CA96C9D00010721 /* bg-nav-side.png in Resources */,
 				9D724A701CA818D3005D6C06 /* Assets.xcassets in Resources */,
 				9D724A6E1CA818D3005D6C06 /* Main.storyboard in Resources */,
 			);
@@ -301,6 +312,7 @@
 				9D724A6B1CA818D3005D6C06 /* ViewController.swift in Sources */,
 				9D724A971CA81A1D005D6C06 /* CustomCollectionViewCell.swift in Sources */,
 				9D724A691CA818D3005D6C06 /* AppDelegate.swift in Sources */,
+				9DFDCFFC1CA96E3B00010721 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +537,7 @@
 				9D724A8F1CA818D4005D6C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D724A901CA818D4005D6C06 /* Build configuration list for PBXNativeTarget "24DayTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +546,7 @@
 				9D724A921CA818D4005D6C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D724A931CA818D4005D6C06 /* Build configuration list for PBXNativeTarget "24DayUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +555,7 @@
 				9D724A951CA818D4005D6C06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
