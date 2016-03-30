@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D724A641CA818D3005D6C06"
+               BlueprintIdentifier = "9D61660C1CAC0BD8000FA183"
                BuildableName = "24Day.app"
                BlueprintName = "24Day"
                ReferencedContainer = "container:24Day.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D724A781CA818D4005D6C06"
-               BuildableName = "24DayTests.xctest"
-               BlueprintName = "24DayTests"
-               ReferencedContainer = "container:24Day.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9D724A831CA818D4005D6C06"
-               BuildableName = "24DayUITests.xctest"
-               BlueprintName = "24DayUITests"
-               ReferencedContainer = "container:24Day.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9D724A641CA818D3005D6C06"
+            BlueprintIdentifier = "9D61660C1CAC0BD8000FA183"
             BuildableName = "24Day.app"
             BlueprintName = "24Day"
             ReferencedContainer = "container:24Day.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9D724A641CA818D3005D6C06"
+            BlueprintIdentifier = "9D61660C1CAC0BD8000FA183"
             BuildableName = "24Day.app"
             BlueprintName = "24Day"
             ReferencedContainer = "container:24Day.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9D724A641CA818D3005D6C06"
+            BlueprintIdentifier = "9D61660C1CAC0BD8000FA183"
             BuildableName = "24Day.app"
             BlueprintName = "24Day"
             ReferencedContainer = "container:24Day.xcodeproj">

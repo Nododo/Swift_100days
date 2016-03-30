@@ -1,30 +1,21 @@
+
+
 //
-//  DetailViewController.swift
+//  DetailController.swift
 //  24Day
 //
-//  Created by dwx on 16/3/28.
+//  Created by dwx on 16/3/30.
 //  Copyright © 2016年 Nododo. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailController: UIViewController {
 
-    var titleName: String = ""
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        let label = UILabel.init(frame: CGRectMake(0, 0, 100, 44));
-        label.textAlignment = .Center
-        label.text = titleName
-        label.font = UIFont.systemFontOfSize(20)
-        label.textColor = UIColor.whiteColor()
-        self.navigationItem.titleView = label
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
-        
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

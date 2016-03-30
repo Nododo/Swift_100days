@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  24Day
 //
-//  Created by dwx on 16/3/27.
+//  Created by dwx on 16/3/30.
 //  Copyright © 2016年 Nododo. All rights reserved.
 //
 
@@ -16,17 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let appearance = UINavigationBar.appearance()
-        appearance.setBackgroundImage(UIImage(named:"bg-nav-side"), forBarMetrics:.Default)
-        let itemAppearance = UIBarButtonItem.appearance()
-        let btnImage = UIImage(named: "back")
-
-        let top = btnImage!.size.height;
-        let left = btnImage!.size.width;
-        let bottom = top;
-        let right = left;
-        let finalImage = btnImage!.resizableImageWithCapInsets(UIEdgeInsetsMake(top, left, bottom, right), resizingMode: .Stretch)
-        itemAppearance.setBackgroundImage(finalImage, forState: .Normal, barMetrics: .Default)
         return true
     }
 
