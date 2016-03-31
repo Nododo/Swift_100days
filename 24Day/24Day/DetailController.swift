@@ -14,7 +14,34 @@ class DetailController: UIViewController {
 
     @IBOutlet weak var avatarView: UIImageView!
     @IBAction func alert(sender: AnyObject) {
+         let reprotAction = UIAlertAction.init(title: "report", style: .Destructive) { (nil) in
+           print("report")
+        }
         
+        let shareAction = UIAlertAction.init(title: "share", style: .Default) { (nil) in
+            print("share")
+        }
+        
+        let saveAction = UIAlertAction.init(title: "save image", style: .Default) { (nil) in
+            print("save image")
+        }
+        
+        let copyAction = UIAlertAction.init(title: "copy link", style: .Default) { (nil) in
+            print("copy link")
+        }
+        
+        let cancleAction = UIAlertAction.init(title: "cancle", style: .Cancel) { (nil) in
+            print("cancle")
+        }
+        
+        let alert = UIAlertController.init(title: nil, message: nil, preferredStyle: .ActionSheet)
+        alert.addAction(reprotAction)
+        alert.addAction(shareAction)
+        alert.addAction(saveAction)
+        alert.addAction(copyAction)
+        alert.addAction(cancleAction)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()        
