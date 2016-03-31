@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // MARK: 自定义导航栏背景色
+        let appearence = UINavigationBar.appearance()
+        appearence.setBackgroundImage(UIImage(named: "bg-nav-side"), forBarMetrics: .Default)
+        // MARK: 标题自定义
+        appearence.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(25)];
+        
         return true
     }
 

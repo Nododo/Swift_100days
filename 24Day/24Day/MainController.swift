@@ -14,6 +14,7 @@ class MainController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Photo"
 
         
 // MARK: 创建UICollectionViewController 这里自动帮你注册cell
