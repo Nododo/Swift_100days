@@ -12,9 +12,13 @@ import UIKit
 
 class DetailController: UIViewController {
 
+    @IBOutlet weak var avatarView: UIImageView!
+    @IBAction func alert(sender: AnyObject) {
+        
+    }
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+        super.viewDidLoad()        
+        avatarView.image = UIImage(named: self.title!)
         // Do any additional setup after loading the view.
     }
 

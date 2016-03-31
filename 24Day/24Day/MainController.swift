@@ -54,7 +54,12 @@ class MainController: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CustomCell
+        
         let detail = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("detail") as! DetailController
+        
+        detail.title = cell.photoName
+        
         self.navigationController?.pushViewController(detail, animated: true)
     }
 

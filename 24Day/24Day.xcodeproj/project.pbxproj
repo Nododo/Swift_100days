@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F898E381CACCB7600982FD4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F898E371CACCB7600982FD4 /* back.png */; };
 		9D6166111CAC0BDA000FA183 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6166101CAC0BDA000FA183 /* AppDelegate.swift */; };
 		9D6166161CAC0BDA000FA183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D6166141CAC0BDA000FA183 /* Main.storyboard */; };
 		9D6166181CAC0BDA000FA183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6166171CAC0BDA000FA183 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		9D6166331CAC0BF4000FA183 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6166281CAC0BF4000FA183 /* 7.png */; };
 		9D6166341CAC0BF4000FA183 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6166291CAC0BF4000FA183 /* 8.png */; };
 		9D6166351CAC0BF4000FA183 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D61662A1CAC0BF4000FA183 /* 9.png */; };
-		9D6166361CAC0BF4000FA183 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D61662B1CAC0BF4000FA183 /* back.png */; };
 		9D6166371CAC0BF4000FA183 /* bg-nav-side.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D61662C1CAC0BF4000FA183 /* bg-nav-side.png */; };
 		9D6166391CAC0CDD000FA183 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6166381CAC0CDD000FA183 /* CustomCell.swift */; };
 		9D61663B1CAC0D0F000FA183 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D61663A1CAC0D0F000FA183 /* MainController.swift */; };
@@ -30,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F898E371CACCB7600982FD4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		9D61660D1CAC0BD8000FA183 /* 24Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 24Day.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6166101CAC0BDA000FA183 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D6166151CAC0BDA000FA183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		9D6166281CAC0BF4000FA183 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		9D6166291CAC0BF4000FA183 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		9D61662A1CAC0BF4000FA183 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
-		9D61662B1CAC0BF4000FA183 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		9D61662C1CAC0BF4000FA183 /* bg-nav-side.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-nav-side.png"; sourceTree = "<group>"; };
 		9D6166381CAC0CDD000FA183 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		9D61663A1CAC0D0F000FA183 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -98,9 +98,9 @@
 				9D6166281CAC0BF4000FA183 /* 7.png */,
 				9D6166291CAC0BF4000FA183 /* 8.png */,
 				9D61662A1CAC0BF4000FA183 /* 9.png */,
-				9D61662B1CAC0BF4000FA183 /* back.png */,
 				9D61662C1CAC0BF4000FA183 /* bg-nav-side.png */,
 				9D6166401CAC1E88000FA183 /* heart.png */,
+				1F898E371CACCB7600982FD4 /* back.png */,
 				9D6166141CAC0BDA000FA183 /* Main.storyboard */,
 				9D6166171CAC0BDA000FA183 /* Assets.xcassets */,
 				9D6166191CAC0BDA000FA183 /* LaunchScreen.storyboard */,
@@ -176,10 +176,10 @@
 				9D6166321CAC0BF4000FA183 /* 6.png in Resources */,
 				9D61662E1CAC0BF4000FA183 /* 2.png in Resources */,
 				9D6166411CAC1E88000FA183 /* heart.png in Resources */,
-				9D6166361CAC0BF4000FA183 /* back.png in Resources */,
 				9D61662F1CAC0BF4000FA183 /* 3.png in Resources */,
 				9D6166311CAC0BF4000FA183 /* 5.png in Resources */,
 				9D6166331CAC0BF4000FA183 /* 7.png in Resources */,
+				1F898E381CACCB7600982FD4 /* back.png in Resources */,
 				9D6166351CAC0BF4000FA183 /* 9.png in Resources */,
 				9D6166181CAC0BDA000FA183 /* Assets.xcassets in Resources */,
 				9D6166161CAC0BDA000FA183 /* Main.storyboard in Resources */,
@@ -347,6 +347,7 @@
 				9D6166211CAC0BDA000FA183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearence.setBackgroundImage(UIImage(named: "bg-nav-side"), forBarMetrics: .Default)
         // MARK: 标题自定义
         appearence.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(25)];
-        
         return true
     }
 
