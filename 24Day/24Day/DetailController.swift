@@ -13,6 +13,8 @@ import UIKit
 class DetailController: UIViewController {
 
     @IBOutlet weak var avatarView: UIImageView!
+
+    
     @IBAction func alert(sender: AnyObject) {
          let reprotAction = UIAlertAction.init(title: "report", style: .Destructive) { (nil) in
            print("report")
@@ -46,8 +48,11 @@ class DetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()        
         avatarView.image = UIImage(named: self.title!)
-        // Do any additional setup after loading the view.
     }
+    
+
+    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
