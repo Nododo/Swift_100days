@@ -23,7 +23,7 @@ extension UIColor {
     }
 }
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var bannerView: UICollectionView!
     var timer: NSTimer!
@@ -71,13 +71,40 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
-        self.timer.invalidate()
-        self.timer = nil
+        
+        if scrollView.isKindOfClass(UICollectionView.self) {
+            self.timer.invalidate()
+            self.timer = nil
+        }
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        self.index = Int(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.size.width)
-        self.setupTimer()
+        if scrollView.isKindOfClass(UICollectionView.self) {
+            
+            self.index = Int(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.size.width)
+            self.setupTimer()
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if  let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("table") {
+            cell.textLabel?.text = "movie name"
+            return cell
+        } else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "movie name"
+            return cell
+        }
+        
+       
     }
 
 }

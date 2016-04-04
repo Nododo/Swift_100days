@@ -64,12 +64,24 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="V0d-Ws-Iok"/>
                                 </connections>
                             </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dIX-kF-ifK">
+                                <rect key="frame" x="0.0" y="244" width="600" height="356"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VwM-5g-4bh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Rd4-7O-gdj"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1X3-3W-lIu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GBS-6j-cax"/>
                             <constraint firstAttribute="trailing" secondItem="1X3-3W-lIu" secondAttribute="trailing" id="GNw-ty-Z0F"/>
+                            <constraint firstItem="dIX-kF-ifK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LKn-8J-AiW"/>
+                            <constraint firstItem="dIX-kF-ifK" firstAttribute="top" secondItem="1X3-3W-lIu" secondAttribute="bottom" id="dzo-Lr-Rrq"/>
                             <constraint firstItem="1X3-3W-lIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pbc-Al-QhA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dIX-kF-ifK" secondAttribute="bottom" id="srZ-2H-dRt"/>
+                            <constraint firstAttribute="trailing" secondItem="dIX-kF-ifK" secondAttribute="trailing" id="zQC-NW-vDG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uf6-Nn-92t">
@@ -100,7 +112,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rX-wE-D3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="442"/>
+            <point key="canvasLocation" x="363" y="444"/>
         </scene>
     </scenes>
 </document>
