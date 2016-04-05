@@ -26,12 +26,12 @@ extension UIColor {
 class HeaderReusableView: UICollectionReusableView, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("headerCell", forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("headerCell", forIndexPath: indexPath) as! HeaderCell
+        cell.picView.image = UIImage(named: String(format: "banner%d", indexPath.row + 1))
         return cell
     }
 }

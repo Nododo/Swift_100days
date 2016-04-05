@@ -10,14 +10,27 @@ import UIKit
 
 private let reuseIdentifier  = "featured"
 private let chartsIdentifier = "charts"
+var currentStyle: Int = 0
 
 class MainController: UICollectionViewController {
 
+    @IBAction func toggle(sender: UISegmentedControl) {
+        currentStyle = sender.selectedSegmentIndex
+        if currentStyle == 0 {
+            let customLayout = CustomFlowLayout()
+            self.collectionView?.setCollectionViewLayout(customLayout, animated: false)
+            self.collectionView?.reloadData()
+        } else {
+            let chartsLayout = ChartsFlowLayout()
+            self.collectionView?.setCollectionViewLayout(chartsLayout, animated: false)
+            self.collectionView?.reloadData()
+        }
+        
+    }
      var movieArray: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         makeData()
     }
 
@@ -27,6 +40,7 @@ class MainController: UICollectionViewController {
             let movie = Movie.init(name: str, pic: str)
             movieArray.append(movie)
         }
+        movieArray.appendContentsOf(movieArray)
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,16 +72,25 @@ class MainController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+       
         let movie = movieArray[indexPath.row]
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FeaturedCell
-       cell.avatarView.image = UIImage(named: movie.moviePic)
-        cell.nameLabel.text = movie.movieName
-    
-        return cell
+        if currentStyle == 0 {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FeaturedCell
+            cell.avatarView.image = UIImage(named: movie.moviePic)
+            cell.nameLabel.text = movie.movieName
+            
+            return cell
+        } else {
+            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(chartsIdentifier, forIndexPath: indexPath) as! ChartsCell
+            cell.photoView.image = UIImage(named: movie.moviePic)
+            cell.nameLabel.text = movie.movieName
+            return cell
+        }
     }
 
     override func  collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-            let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath)
         return header
 
     }

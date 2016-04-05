@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -22,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Js6-UW-5vC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="644"/>
+            <point key="canvasLocation" x="83" y="605"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="qPW-1L-FUY">
@@ -75,6 +76,67 @@
                                 <connections>
                                     <outlet property="avatarView" destination="vvm-kN-dCX" id="wYX-Jk-ONi"/>
                                     <outlet property="nameLabel" destination="5mg-1P-kYe" id="vkz-Ql-AUN"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="charts" id="9Ux-yZ-UHM" customClass="ChartsCell" customModule="_9Day" customModuleProvider="target">
+                                <rect key="frame" x="223" y="223" width="283" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="283" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTd-Yw-PcZ">
+                                            <rect key="frame" x="0.0" y="57" width="20" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="9r9-Xj-DeY"/>
+                                                <constraint firstAttribute="height" constant="30" id="u1z-Jx-eiO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="euF-wp-Drr">
+                                            <rect key="frame" x="25" y="5" width="40" height="133"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="euF-wp-Drr" secondAttribute="height" multiplier="0.3" id="gKP-1Z-CC5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTu-TO-lzw">
+                                            <rect key="frame" x="80" y="68" width="198" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zo-IE-wPD">
+                                            <rect key="frame" x="77" y="15" width="198" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="euF-wp-Drr" secondAttribute="bottom" constant="5" id="4gW-Ax-dAu"/>
+                                    <constraint firstItem="fTu-TO-lzw" firstAttribute="leading" secondItem="euF-wp-Drr" secondAttribute="trailing" constant="15" id="5u6-bP-Nqa"/>
+                                    <constraint firstItem="0Zo-IE-wPD" firstAttribute="leading" secondItem="euF-wp-Drr" secondAttribute="trailing" constant="15" id="7Db-zi-pNQ"/>
+                                    <constraint firstItem="euF-wp-Drr" firstAttribute="leading" secondItem="oTd-Yw-PcZ" secondAttribute="trailing" constant="5" id="D0s-oW-rd0"/>
+                                    <constraint firstItem="oTd-Yw-PcZ" firstAttribute="leading" secondItem="9Ux-yZ-UHM" secondAttribute="leading" id="Iyj-at-XXJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Zo-IE-wPD" secondAttribute="trailing" constant="5" id="LCP-En-LNx"/>
+                                    <constraint firstItem="euF-wp-Drr" firstAttribute="top" secondItem="9Ux-yZ-UHM" secondAttribute="top" constant="5" id="bKu-6W-Pks"/>
+                                    <constraint firstItem="0Zo-IE-wPD" firstAttribute="height" secondItem="9Ux-yZ-UHM" secondAttribute="height" multiplier="1:3" id="eL0-Pg-eiL"/>
+                                    <constraint firstAttribute="bottom" secondItem="fTu-TO-lzw" secondAttribute="bottom" constant="5" id="eng-ke-F8s"/>
+                                    <constraint firstItem="oTd-Yw-PcZ" firstAttribute="centerY" secondItem="9Ux-yZ-UHM" secondAttribute="centerY" id="hMH-eB-pYF"/>
+                                    <constraint firstItem="fTu-TO-lzw" firstAttribute="top" secondItem="0Zo-IE-wPD" secondAttribute="bottom" constant="5" id="j32-Sy-TEc"/>
+                                    <constraint firstAttribute="trailing" secondItem="fTu-TO-lzw" secondAttribute="trailing" constant="5" id="kAC-en-tHp"/>
+                                    <constraint firstItem="0Zo-IE-wPD" firstAttribute="top" secondItem="9Ux-yZ-UHM" secondAttribute="top" constant="15" id="zbj-jP-KIF"/>
+                                </constraints>
+                                <size key="customSize" width="283" height="143"/>
+                                <connections>
+                                    <outlet property="detailLabel" destination="fTu-TO-lzw" id="rSJ-To-XCJ"/>
+                                    <outlet property="nameLabel" destination="oTd-Yw-PcZ" id="SS1-d4-b3H"/>
+                                    <outlet property="photoView" destination="euF-wp-Drr" id="mBK-Lr-x0s"/>
+                                    <outlet property="titleLabel" destination="0Zo-IE-wPD" id="MVg-e1-8YY"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -133,11 +195,26 @@
                             <outlet property="delegate" destination="FNQ-By-Xnc" id="GnJ-oJ-zuo"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="NeS-Qp-j3O"/>
+                    <navigationItem key="navigationItem" id="NeS-Qp-j3O">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Genres" id="gY1-Ij-Wya"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="366-Hf-taf">
+                            <rect key="frame" x="210" y="7" width="180" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Featured"/>
+                                <segment title="Charts"/>
+                            </segments>
+                            <connections>
+                                <action selector="toggle:" destination="FNQ-By-Xnc" eventType="valueChanged" id="C0D-pX-ZKa"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="vRq-ml-59a"/>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnB-7D-3dX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="581"/>
+            <point key="canvasLocation" x="544" y="570"/>
         </scene>
     </scenes>
 </document>

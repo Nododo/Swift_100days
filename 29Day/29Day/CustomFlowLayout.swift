@@ -23,4 +23,12 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         self.headerReferenceSize = CGSizeMake(screenW, headerH)
     }
     
+     override init() {
+        super.init()
+        self.minimumLineSpacing = 0
+        self.minimumInteritemSpacing = 0
+        self.itemSize = CGSizeMake(screenW / 3, screenW / 3 + nameH)
+        self.headerReferenceSize = CGSizeMake(screenW, headerH)
+    }
+    
 }
