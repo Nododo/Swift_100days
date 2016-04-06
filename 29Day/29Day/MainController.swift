@@ -9,29 +9,62 @@
 import UIKit
 
 private let reuseIdentifier  = "featured"
-private let chartsIdentifier = "charts"
-var currentStyle: Int = 0
+private let cellIdentifier  = "tableCell"
+let screenH = UIScreen.mainScreen().bounds.size.height
+let screehW = UIScreen.mainScreen().bounds.size.width
 
-class MainController: UICollectionViewController {
+
+var mainTable: UITableView!
+
+class MainController: UICollectionViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func toggle(sender: UISegmentedControl) {
-        currentStyle = sender.selectedSegmentIndex
-        if currentStyle == 0 {
-            let customLayout = CustomFlowLayout()
-            self.collectionView?.setCollectionViewLayout(customLayout, animated: false)
-            self.collectionView?.reloadData()
-        } else {
-            let chartsLayout = ChartsFlowLayout()
-            self.collectionView?.setCollectionViewLayout(chartsLayout, animated: false)
-            self.collectionView?.reloadData()
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.view.bringSubviewToFront(self.collectionView!)
+        case 1:
+            self.view.bringSubviewToFront(mainTable)
+        default:
+            print("")
         }
-        
     }
      var movieArray: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeData()
+        setupTable()
+    }
+    
+    func setupTable() {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            mainTable = UITableView.init(frame: CGRectMake(0, 64, screehW, screenH - 64));
+            mainTable.registerNib(UINib.init(nibName: "ChartsTableCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+            mainTable.delegate = self
+            mainTable.dataSource = self
+            dispatch_async(dispatch_get_main_queue(), {
+                self.view.insertSubview(mainTable, belowSubview: self.collectionView!)
+            })
+        }
+    }
+    
+    //MARK: tableView
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return movieArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let movie = movieArray[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! ChartsTableCell
+        cell.numberLabel.text = movie.movieName
+        cell.photoView.image = UIImage(named: movie.movieName)
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 88
     }
 
     func makeData() {
@@ -74,19 +107,11 @@ class MainController: UICollectionViewController {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        
         let movie = movieArray[indexPath.row]
-        if currentStyle == 0 {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FeaturedCell
             cell.avatarView.image = UIImage(named: movie.moviePic)
             cell.nameLabel.text = movie.movieName
-            
             return cell
-        } else {
-            
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(chartsIdentifier, forIndexPath: indexPath) as! ChartsCell
-            cell.photoView.image = UIImage(named: movie.moviePic)
-            cell.nameLabel.text = movie.movieName
-            return cell
-        }
+
     }
 
     override func  collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
