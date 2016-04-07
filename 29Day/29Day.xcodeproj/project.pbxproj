@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7D1DDE1CB66482001FC243 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */; };
+		1F7D1DE01CB66716001FC243 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */; };
 		1FDD26A81CB38FDF00910365 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26A71CB38FDF00910365 /* MainController.swift */; };
 		1FDD26AA1CB3904500910365 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26A91CB3904500910365 /* CustomFlowLayout.swift */; };
 		1FDD26AC1CB390D400910365 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26AB1CB390D400910365 /* FeaturedCell.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
 		1FDD26A71CB38FDF00910365 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = 29Day/MainController.swift; sourceTree = SOURCE_ROOT; };
 		1FDD26A91CB3904500910365 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFlowLayout.swift; path = ../CustomFlowLayout.swift; sourceTree = "<group>"; };
 		1FDD26AB1CB390D400910365 /* FeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedCell.swift; path = ../FeaturedCell.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F7D1DDC1CB6646A001FC243 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */,
+				1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1FFBF9B91CB49FED003ACEA5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 				1FFBF9B91CB49FED003ACEA5 /* Main */,
 				1FFBF9BA1CB4A00C003ACEA5 /* Header */,
 				1FFBF9BB1CB4A02C003ACEA5 /* Charts */,
+				1F7D1DDC1CB6646A001FC243 /* Search */,
 				9DD973F61CB3FA570032B4F4 /* banner */,
 				9D1DD3221CB2534000B0E3F9 /* 头像 */,
 			);
@@ -257,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F7D1DE01CB66716001FC243 /* CustomSearchController.swift in Sources */,
 				1FDD26A81CB38FDF00910365 /* MainController.swift in Sources */,
 				1FDD26B01CB397BD00910365 /* HeaderReusableView.swift in Sources */,
+				1F7D1DDE1CB66482001FC243 /* CustomSearchBar.swift in Sources */,
 				1FFBF9C11CB4B26B003ACEA5 /* ChartsTableCell.swift in Sources */,
 				1FDD26B21CB397E200910365 /* HeaderCell.swift in Sources */,
 				9D1DD30F1CB24EAC00B0E3F9 /* AppDelegate.swift in Sources */,

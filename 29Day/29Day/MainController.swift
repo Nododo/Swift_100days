@@ -12,12 +12,33 @@ private let reuseIdentifier  = "featured"
 private let cellIdentifier  = "tableCell"
 let screenH = UIScreen.mainScreen().bounds.size.height
 let screehW = UIScreen.mainScreen().bounds.size.width
-
-
 var mainTable: UITableView!
+var customSearchController: CustomSearchController!
 
-class MainController: UICollectionViewController, UITableViewDelegate, UITableViewDataSource {
+class MainController: UICollectionViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate {
 
+    @IBAction func toSearch(sender: UIBarButtonItem) {
+//        let searchVC = UISearchController.init(searchResultsController: nil);
+//        searchVC.hidesNavigationBarDuringPresentation = true;
+//        searchVC.searchBar.searchBarStyle = .Minimal;
+//        searchVC.searchResultsUpdater = self
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: searchVC.searchBar);
+        
+//        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, 200, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
+//        
+//        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: customSearchController.searchBar);
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        print("\(searchController.searchBar.text)")
+    }
+    
+
+    func willPresentSearchController(searchController: UISearchController) {
+        self.navigationController?.navigationBar.hidden = true
+    }
+    
     @IBAction func toggle(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -28,17 +49,22 @@ class MainController: UICollectionViewController, UITableViewDelegate, UITableVi
             print("")
         }
     }
+    
+    
      var movieArray: [Movie] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.collectionView?.backgroundColor = UIColor.blackColor()
         makeData()
         setupTable()
+//        UISearchController
     }
     
     func setupTable() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             mainTable = UITableView.init(frame: CGRectMake(0, 64, screehW, screenH - 64));
+            mainTable.backgroundColor = UIColor.blackColor()
             mainTable.registerNib(UINib.init(nibName: "ChartsTableCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
             mainTable.delegate = self
             mainTable.dataSource = self
