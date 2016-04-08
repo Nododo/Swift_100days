@@ -36,6 +36,7 @@ class BlurView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
 //    collectionView.backgroundColor = UIColor.randomColor()
 //    collectionView.registerClass(FeaturedCell.self, forCellWithReuseIdentifier: "blur")
     collectionView.registerNib(UINib.init(nibName: "BlurCell", bundle: nil), forCellWithReuseIdentifier: "blur")
+    collectionView.backgroundColor = UIColor.clearColor()
     collectionView.delegate = self
     collectionView.dataSource = self
     view.addSubview(collectionView)
