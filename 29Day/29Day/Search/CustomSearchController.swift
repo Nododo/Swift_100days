@@ -8,9 +8,22 @@
 
 import UIKit
 
-class CustomSearchController: UISearchController {
+protocol CustomSearchControllerDelegate {
+    func didStartSearching()
+    
+    func didTapOnSearchButton()
+    
+    func didTapOnCancelButton()
+    
+    func didChangeSearchText(searchText: String)
+}
+
+class CustomSearchController: UISearchController, UISearchBarDelegate {
 
     var customSearchBar: CustomSearchBar!
+    
+    var customDelegate: CustomSearchControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +34,7 @@ class CustomSearchController: UISearchController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     init(searchResultsController: UIViewController!, searchBarFrame: CGRect, searchBarFont: UIFont, searchBarTextColor: UIColor, searchBarTintColor: UIColor) {
         super.init(searchResultsController: searchResultsController)
         
@@ -36,22 +50,33 @@ class CustomSearchController: UISearchController {
     }
 
     func configureSearchBar(frame: CGRect, font: UIFont, textColor: UIColor, bgColor: UIColor) {
-        customSearchBar = CustomSearchBar(frame: frame, font: font , textColor: textColor)
-        
+        customSearchBar = CustomSearchBar(frame: CGRectMake(0, 0, self.searchBar.bounds.size.width - 15, 44), font: font , textColor: textColor)
         customSearchBar.barTintColor = bgColor
         customSearchBar.tintColor = textColor
-        customSearchBar.showsBookmarkButton = false
         customSearchBar.showsCancelButton = true
+        customSearchBar.delegate = self
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        customSearchBar.becomeFirstResponder()
+        customDelegate.didStartSearching()
     }
-    */
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        customSearchBar.resignFirstResponder()
+        
+        customDelegate.didTapOnSearchButton()
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        customSearchBar.resignFirstResponder()
+        customDelegate.didTapOnCancelButton()
+    }
+    
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        customDelegate.didChangeSearchText(searchText)
+    }
 
 }

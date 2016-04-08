@@ -10,34 +10,28 @@ import UIKit
 
 private let reuseIdentifier  = "featured"
 private let cellIdentifier  = "tableCell"
+
 let screenH = UIScreen.mainScreen().bounds.size.height
 let screehW = UIScreen.mainScreen().bounds.size.width
 var mainTable: UITableView!
 var customSearchController: CustomSearchController!
+var blurView: BlurView!
 
-class MainController: UICollectionViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate {
 
-    @IBAction func toSearch(sender: UIBarButtonItem) {
-//        let searchVC = UISearchController.init(searchResultsController: nil);
-//        searchVC.hidesNavigationBarDuringPresentation = true;
-//        searchVC.searchBar.searchBarStyle = .Minimal;
-//        searchVC.searchResultsUpdater = self
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: searchVC.searchBar);
-        
-//        customSearchController = CustomSearchController(searchResultsController: self, searchBarFrame: CGRectMake(0.0, 0.0, 200, 50.0), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
-//        
-//        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(customView: customSearchController.searchBar);
-    }
-    
+class MainController: UICollectionViewController, UISearchResultsUpdating, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, CustomSearchControllerDelegate {
+
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        print("\(searchController.searchBar.text)")
+        print("\(customSearchController.searchBar.text)")
     }
     
 
-    func willPresentSearchController(searchController: UISearchController) {
-        self.navigationController?.navigationBar.hidden = true
+    
+    @IBAction func touchToSearch(sender: UIBarButtonItem) {
+        self.navigationController?.navigationBar.addSubview(customSearchController.customSearchBar)
+        customSearchController.customSearchBar.becomeFirstResponder()
+       view.bringSubviewToFront(blurView)
     }
+
     
     @IBAction func toggle(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -56,9 +50,18 @@ class MainController: UICollectionViewController, UISearchResultsUpdating, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = UIColor.blackColor()
+        blurView = BlurView.init(frame: self.view.bounds)
+        view.insertSubview(blurView, belowSubview: collectionView!)
         makeData()
         setupTable()
-//        UISearchController
+        setupSearch()
+    }
+    
+    func setupSearch() {
+        customSearchController = CustomSearchController(searchResultsController: nil, searchBarFrame: CGRectMake(0.0, 0.0, 100, 44), searchBarFont: UIFont(name: "Futura", size: 16.0)!, searchBarTextColor: UIColor.orangeColor(), searchBarTintColor: UIColor.blackColor())
+        customSearchController.customSearchBar.placeholder = "Search in this awesome bar..."
+        customSearchController.customDelegate = self;
+        
     }
     
     func setupTable() {
@@ -144,5 +147,33 @@ class MainController: UICollectionViewController, UISearchResultsUpdating, UITab
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "header", forIndexPath: indexPath)
         return header
 
+    }
+
+    
+    // MARK: CustomSearchControllerDelegate functions
+    
+    func didStartSearching() {
+        dispatch_async(dispatch_get_main_queue()) {
+            customSearchController.searchResultsController?.view.hidden = false
+        }
+    }
+    
+    
+    func didTapOnSearchButton() {
+    }
+    
+    
+    func didTapOnCancelButton() {
+       customSearchController.customSearchBar.resignFirstResponder()
+        customSearchController.customSearchBar.removeFromSuperview()
+        view.sendSubviewToBack(blurView)
+    }
+    
+    
+    func didChangeSearchText(searchText: String) {
+        let resultArray = movieArray.filter { (movie) -> Bool in
+            return movie.movieName.containsString(searchText)
+        }
+        blurView.resultArray = resultArray
     }
 }

@@ -154,14 +154,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="vRq-ml-59a">
                             <color key="tintColor" red="0.65490196079999996" green="0.50980392159999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="toSearch:" destination="FNQ-By-Xnc" id="ucP-k2-hU1"/>
+                                <action selector="touchToSearch:" destination="FNQ-By-Xnc" id="hUD-fa-K1F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnB-7D-3dX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="655"/>
+            <point key="canvasLocation" x="-244" y="662"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1F7D1DDE1CB66482001FC243 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */; };
 		1F7D1DE01CB66716001FC243 /* CustomSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */; };
+		1FA96D8C1CB7860F00776550 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA96D8B1CB7860F00776550 /* BlurView.swift */; };
+		1FA96D971CB7C0D600776550 /* BlurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA96D951CB7C0D600776550 /* BlurCell.swift */; };
+		1FA96D981CB7C0D600776550 /* BlurCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FA96D961CB7C0D600776550 /* BlurCell.xib */; };
 		1FDD26A81CB38FDF00910365 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26A71CB38FDF00910365 /* MainController.swift */; };
 		1FDD26AA1CB3904500910365 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26A91CB3904500910365 /* CustomFlowLayout.swift */; };
 		1FDD26AC1CB390D400910365 /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDD26AB1CB390D400910365 /* FeaturedCell.swift */; };
@@ -39,6 +42,9 @@
 /* Begin PBXFileReference section */
 		1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchController.swift; sourceTree = "<group>"; };
+		1FA96D8B1CB7860F00776550 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		1FA96D951CB7C0D600776550 /* BlurCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurCell.swift; sourceTree = "<group>"; };
+		1FA96D961CB7C0D600776550 /* BlurCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurCell.xib; sourceTree = "<group>"; };
 		1FDD26A71CB38FDF00910365 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = 29Day/MainController.swift; sourceTree = SOURCE_ROOT; };
 		1FDD26A91CB3904500910365 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomFlowLayout.swift; path = ../CustomFlowLayout.swift; sourceTree = "<group>"; };
 		1FDD26AB1CB390D400910365 /* FeaturedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedCell.swift; path = ../FeaturedCell.swift; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 			children = (
 				1F7D1DDD1CB66482001FC243 /* CustomSearchBar.swift */,
 				1F7D1DDF1CB66716001FC243 /* CustomSearchController.swift */,
+				1FA96D8B1CB7860F00776550 /* BlurView.swift */,
+				1FA96D951CB7C0D600776550 /* BlurCell.swift */,
+				1FA96D961CB7C0D600776550 /* BlurCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 				1FFBF9C21CB4B26B003ACEA5 /* ChartsTableCell.xib in Resources */,
 				9D1DD3191CB24EAC00B0E3F9 /* LaunchScreen.storyboard in Resources */,
 				9D1DD32F1CB2534000B0E3F9 /* 4.png in Resources */,
+				1FA96D981CB7C0D600776550 /* BlurCell.xib in Resources */,
 				9D1DD32C1CB2534000B0E3F9 /* 1.png in Resources */,
 				9DD973FC1CB3FA570032B4F4 /* banner3.png in Resources */,
 				9D1DD3311CB2534000B0E3F9 /* 6.png in Resources */,
@@ -271,11 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FA96D971CB7C0D600776550 /* BlurCell.swift in Sources */,
 				1F7D1DE01CB66716001FC243 /* CustomSearchController.swift in Sources */,
 				1FDD26A81CB38FDF00910365 /* MainController.swift in Sources */,
 				1FDD26B01CB397BD00910365 /* HeaderReusableView.swift in Sources */,
 				1F7D1DDE1CB66482001FC243 /* CustomSearchBar.swift in Sources */,
 				1FFBF9C11CB4B26B003ACEA5 /* ChartsTableCell.swift in Sources */,
+				1FA96D8C1CB7860F00776550 /* BlurView.swift in Sources */,
 				1FDD26B21CB397E200910365 /* HeaderCell.swift in Sources */,
 				9D1DD30F1CB24EAC00B0E3F9 /* AppDelegate.swift in Sources */,
 				1FDD26B41CB3980700910365 /* HeaderFlowLayout.swift in Sources */,

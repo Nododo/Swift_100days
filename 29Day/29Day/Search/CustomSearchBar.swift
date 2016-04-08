@@ -17,7 +17,7 @@ class CustomSearchBar: UISearchBar {
         self.frame = frame
         preferredFont = font
         preferredTextColor = textColor
-        searchBarStyle = UISearchBarStyle.Prominent
+        searchBarStyle = .Default
         translucent = false
     }
     
@@ -27,7 +27,7 @@ class CustomSearchBar: UISearchBar {
     
     func indexOfSearchFieldInSubviews() -> Int! {
         var index: Int!
-        let searchBarView = subviews[0] 
+        let searchBarView = subviews[0]
         
         for i in 0 ..< searchBarView.subviews.count {
             if searchBarView.subviews[i].isKindOfClass(UITextField) {
@@ -46,7 +46,7 @@ class CustomSearchBar: UISearchBar {
             let searchField: UITextField = (subviews[0]).subviews[index] as! UITextField
             
             // 设置 frame
-            searchField.frame = CGRectMake(5.0, 5.0, frame.size.width - 10.0, frame.size.height - 10.0)
+//            searchField.frame = CGRectMake(5.0, 5.0, frame.size.width - 10.0, frame.size.height - 10.0)
             
             // 设置字体和文字颜色
             searchField.font = preferredFont
@@ -56,18 +56,18 @@ class CustomSearchBar: UISearchBar {
             searchField.backgroundColor = barTintColor
         }
         
-        let startPoint = CGPointMake(0.0, frame.size.height)
-        let endPoint = CGPointMake(frame.size.width, frame.size.height)
-        let path = UIBezierPath()
-        path.moveToPoint(startPoint)
-        path.addLineToPoint(endPoint)
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = path.CGPath
-        shapeLayer.strokeColor = preferredTextColor.CGColor
-        shapeLayer.lineWidth = 2.5
-        
-        layer.addSublayer(shapeLayer)
+//        let startPoint = CGPointMake(0.0, frame.size.height)
+//        let endPoint = CGPointMake(frame.size.width, frame.size.height)
+//        let path = UIBezierPath()
+//        path.moveToPoint(startPoint)
+//        path.addLineToPoint(endPoint)
+//        
+//        let shapeLayer = CAShapeLayer()
+//        shapeLayer.path = path.CGPath
+//        shapeLayer.strokeColor = preferredTextColor.CGColor
+//        shapeLayer.lineWidth = 2.5
+//        
+//        layer.addSublayer(shapeLayer)
         
         super.drawRect(rect)
     }
