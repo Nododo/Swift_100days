@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Jugg Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JuggController" customModule="_3Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jugg.png" translatesAutoresizingMaskIntoConstraints="NO" id="g6e-gi-H5H">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="MxU-5I-X1t" appends="YES" id="lVb-9T-4FI"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g6e-gi-H5H" secondAttribute="bottom" id="KBN-pd-92A"/>
+                            <constraint firstItem="g6e-gi-H5H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vnh-ud-Vqk"/>
+                            <constraint firstAttribute="trailing" secondItem="g6e-gi-H5H" secondAttribute="trailing" id="doa-G3-493"/>
+                            <constraint firstItem="g6e-gi-H5H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vtT-r0-m4x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Jkj-P5-dmu" kind="presentation" identifier="juggToLina" id="coG-pn-vaL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="MxU-5I-X1t">
+                    <connections>
+                        <action selector="swipeG:" destination="BYZ-38-t0r" id="8lI-PB-Mbj"/>
+                        <outlet property="delegate" destination="g6e-gi-H5H" id="tai-MM-uy5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="424" y="835"/>
+        </scene>
+        <!--Lina Controller-->
+        <scene sceneID="BfL-VV-U4K">
+            <objects>
+                <viewController id="Jkj-P5-dmu" customClass="LinaController" customModule="_3Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxU-Rs-ahZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bTj-LZ-P5q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Rg-tJ-Rt2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lina.png" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-8S-Frd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9sX-Ji-Yeh" appends="YES" id="tE6-or-iW1"/>
+                                    <outletCollection property="gestureRecognizers" destination="Nwb-g5-pLj" appends="YES" id="nVU-gI-UjQ"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nSe-8S-Frd" secondAttribute="trailing" id="Kd3-fG-sO7"/>
+                            <constraint firstItem="nSe-8S-Frd" firstAttribute="top" secondItem="fxU-Rs-ahZ" secondAttribute="bottom" id="L2D-Eg-ESM"/>
+                            <constraint firstItem="bTj-LZ-P5q" firstAttribute="top" secondItem="nSe-8S-Frd" secondAttribute="bottom" id="oDe-MF-r2s"/>
+                            <constraint firstItem="nSe-8S-Frd" firstAttribute="leading" secondItem="0Rg-tJ-Rt2" secondAttribute="leading" id="pGp-eZ-v8p"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Bpy-0i-2iD" kind="presentation" identifier="linaToQueen" id="tOF-Hp-gLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLz-ON-uge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="9sX-Ji-Yeh">
+                    <connections>
+                        <action selector="upSwipe:" destination="Jkj-P5-dmu" id="Lc8-1N-oD1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Nwb-g5-pLj">
+                    <connections>
+                        <action selector="downSwipe:" destination="Jkj-P5-dmu" id="Bb7-xw-TAL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="960" y="230"/>
+        </scene>
+        <!--Queen Controller-->
+        <scene sceneID="qHb-cE-EMR">
+            <objects>
+                <viewController id="Bpy-0i-2iD" customClass="QueenController" customModule="_3Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1hb-EI-fKj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z7b-cM-ACx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Euc-Be-IWh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="queen.png" translatesAutoresizingMaskIntoConstraints="NO" id="OCY-fq-mgb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A3b-NY-bzr" appends="YES" id="chn-1T-EoE"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OCY-fq-mgb" firstAttribute="leading" secondItem="Euc-Be-IWh" secondAttribute="leading" id="6GL-fc-Tvy"/>
+                            <constraint firstItem="OCY-fq-mgb" firstAttribute="top" secondItem="Euc-Be-IWh" secondAttribute="top" id="C26-tz-v5z"/>
+                            <constraint firstItem="Z7b-cM-ACx" firstAttribute="top" secondItem="OCY-fq-mgb" secondAttribute="bottom" id="F3q-aW-0GQ"/>
+                            <constraint firstAttribute="trailing" secondItem="OCY-fq-mgb" secondAttribute="trailing" id="WbV-lt-8aa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yeP-sl-Du4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="A3b-NY-bzr">
+                    <connections>
+                        <action selector="downSwipe:" destination="Bpy-0i-2iD" id="6EG-MB-YP7"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1620" y="270"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jugg.png" width="422" height="750"/>
+        <image name="lina.png" width="422" height="750"/>
+        <image name="queen.png" width="422" height="750"/>
+    </resources>
+</document>
