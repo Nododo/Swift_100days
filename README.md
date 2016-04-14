@@ -10,7 +10,7 @@
 ### 4. 19-21Day is all in PROJECT 19Day
 ### 5. 24-26Day is all in PROJECT 24Day
 ### 6. 29-31Day is all in PROJECT 29Day 我从这学习[自定义搜索栏](http://swift.gg/2015/09/11/custom_search_bar_tutorial/),感谢[saitjr](https://github.com/saitjr)提供的帮助,我从这学习[UIVisualEffectView的使用](http://dev.classmethod.jp/references/ios8-uivisualeffectview-ref/)
-## At the begining of the year, my work is too pressing, so i cant update this repo frequently!
+~~## At the begining of the year, my work is too pressing, so i cant update this repo frequently!~~
 
 ## share my favourite words: 你羡慕别人月薪几万，却不知道他日日加班到深夜的辛苦；你羡慕别人说走就走四处周游的自由，却不知道他为这份自由放弃的东西。我们追求的该是自己的幸福，而不是比别人幸福。奋斗的路上别总急着奔跑，偶尔停下来，听听生活的道理。
 ## 当工作越来越难，日子越来越不顺心的时候，我们往往更羡慕那些成功人士。其实，再怎么寸步难行，你也还是在前进；他人的成就，也并不是轻而易举。你不倒下去，就还有一种叫奇迹的可能。
