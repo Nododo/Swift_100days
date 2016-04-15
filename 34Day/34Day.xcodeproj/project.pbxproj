@@ -18,6 +18,8 @@
 		1F1E9AA91CBE467100A77CB4 /* voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E9AA81CBE467100A77CB4 /* voice.png */; };
 		1F1E9AAB1CBE4CB300A77CB4 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E9AAA1CBE4CB300A77CB4 /* setting.png */; };
 		1F1E9AAD1CBE4CE600A77CB4 /* drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F1E9AAC1CBE4CE600A77CB4 /* drawer.png */; };
+		1FDAA26F1CC0D52700BF974A /* PingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA26E1CC0D52700BF974A /* PingTransition.swift */; };
+		1FDAA2711CC0E0FA00BF974A /* SpeakController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAA2701CC0E0FA00BF974A /* SpeakController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		1F1E9AA81CBE467100A77CB4 /* voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice.png; sourceTree = "<group>"; };
 		1F1E9AAA1CBE4CB300A77CB4 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
 		1F1E9AAC1CBE4CE600A77CB4 /* drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawer.png; sourceTree = "<group>"; };
+		1FDAA26E1CC0D52700BF974A /* PingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingTransition.swift; sourceTree = "<group>"; };
+		1FDAA2701CC0E0FA00BF974A /* SpeakController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 			children = (
 				1F1E9A8E1CBDE28300A77CB4 /* AppDelegate.swift */,
 				1F1E9A901CBDE28300A77CB4 /* ViewController.swift */,
+				1FDAA2701CC0E0FA00BF974A /* SpeakController.swift */,
 				1F1E9AA21CBE21FE00A77CB4 /* CoverView.swift */,
+				1FDAA26E1CC0D52700BF974A /* PingTransition.swift */,
 				1F1E9AA01CBE218500A77CB4 /* google.png */,
 				1F1E9AA41CBE29D000A77CB4 /* googleLogo.png */,
 				1F1E9AA81CBE467100A77CB4 /* voice.png */,
@@ -160,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDAA26F1CC0D52700BF974A /* PingTransition.swift in Sources */,
+				1FDAA2711CC0E0FA00BF974A /* SpeakController.swift in Sources */,
 				1F1E9A911CBDE28300A77CB4 /* ViewController.swift in Sources */,
 				1F1E9A8F1CBDE28300A77CB4 /* AppDelegate.swift in Sources */,
 				1F1E9AA31CBE21FE00A77CB4 /* CoverView.swift in Sources */,
@@ -314,6 +322,7 @@
 				1F1E9A9F1CBDE28300A77CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

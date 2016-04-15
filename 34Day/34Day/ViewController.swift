@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
-    @IBAction func doLayerAnimation(sender: UIButton) {
-        
-    }
+    @IBOutlet weak var speakButton: UIButton!
 
     @IBOutlet weak var logoY: NSLayoutConstraint!
     
@@ -54,11 +52,20 @@ class ViewController: UIViewController {
         bannerH.constant = 0
         voiceW.constant = 0
         topH.constant = 0
+//        SpeakController
     }
 
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PingTransition()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let speakVC = segue.destinationViewController as! SpeakController
+        speakVC.transitioningDelegate = self
     }
 
 

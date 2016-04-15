@@ -40,17 +40,6 @@
                                     <constraint firstAttribute="height" constant="66" id="wdy-uL-MLx"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-ca-26P">
-                                <rect key="frame" x="147" y="363" width="306" height="252"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HLY-25-1vo"/>
-                                    <constraint firstAttribute="width" constant="50" id="UCH-Kx-22h"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="voice.png"/>
-                                <connections>
-                                    <action selector="doLayerAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SU2-nw-e7d"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3o-pG-R2p">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <subviews>
@@ -90,6 +79,17 @@
                                     <constraint firstItem="Bnk-5v-0f5" firstAttribute="leading" secondItem="c3o-pG-R2p" secondAttribute="leading" constant="10" id="fIG-DF-HNb"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-ca-26P">
+                                <rect key="frame" x="147" y="363" width="306" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HLY-25-1vo"/>
+                                    <constraint firstAttribute="width" constant="50" id="UCH-Kx-22h"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="voice.png"/>
+                                <connections>
+                                    <segue destination="wXk-Fw-oDY" kind="presentation" id="ezx-Kx-Jnp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -111,6 +111,7 @@
                     <connections>
                         <outlet property="bannerH" destination="wdy-uL-MLx" id="P6e-Ix-UAB"/>
                         <outlet property="logoY" destination="Eb5-Zo-tlf" id="Fgr-HH-QeM"/>
+                        <outlet property="speakButton" destination="c8K-ca-26P" id="bHj-ax-dCq"/>
                         <outlet property="textFieldH" destination="7qj-jC-rIR" id="VWH-K4-u2W"/>
                         <outlet property="topH" destination="cQ7-Zh-tEd" id="ZiI-e4-TZu"/>
                         <outlet property="voiceW" destination="UCH-Kx-22h" id="vLf-XR-BLH"/>
@@ -118,6 +119,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Speak Controller-->
+        <scene sceneID="t1Q-hk-Sg4">
+            <objects>
+                <viewController id="wXk-Fw-oDY" customClass="SpeakController" customModule="_4Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RmF-Ib-vBJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bhf-HN-Wsq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fCS-ES-9ej">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyd-TD-vLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="324"/>
         </scene>
     </scenes>
     <resources>
