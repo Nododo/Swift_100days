@@ -14,8 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    lazy var coverView: CoverView = {
+        let tempView = CoverView(frame: self.window!.bounds)
+        return tempView
+    }()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.window?.makeKeyAndVisible()
+        self.window?.addSubview(coverView)//此处的遮盖图片最好放到appdelegate中的window里面添加
+        self.window?.bringSubviewToFront(coverView)
         return true
+    }
+    
+    func removeCover() {
+        coverView.removeFromSuperview()
     }
 
     func applicationWillResignActive(application: UIApplication) {

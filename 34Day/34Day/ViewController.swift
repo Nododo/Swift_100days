@@ -22,19 +22,11 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var topH: NSLayoutConstraint!
     
-    lazy var coverView: CoverView = {
-    let tempView = CoverView(frame: UIScreen.mainScreen().bounds)
-        return tempView
-    }()
-    
-    override func viewWillAppear(animated: Bool) {
-        self.view.addSubview(coverView)//此处的遮盖图片最好放到appdelegate中的window里面添加
-        self.view.bringSubviewToFront(coverView)
-    }
-    
     override func viewDidAppear(animated: Bool) {
-        coverView.removeFromSuperview()
-        logoY.constant -= 100
+
+       let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.removeCover()
+        logoY.constant = 40
         bannerH.constant = 66
         voiceW.constant = 50
         textFieldH.constant = 40
@@ -52,12 +44,17 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         bannerH.constant = 0
         voiceW.constant = 0
         topH.constant = 0
-//        SpeakController
     }
 
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return PingTransition()
     }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PingInvertTransition()
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

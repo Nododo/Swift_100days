@@ -27,14 +27,13 @@ class PingTransition: NSObject, UIViewControllerAnimatedTransitioning{
         
         contentView?.addSubview(toVC.view)
         
+        // MARK: 按钮范围内最大的圆
         let maskStartBP = UIBezierPath.init(ovalInRect: speakBtn.frame)
         
-        let  finalPoint = CGPointMake(speakBtn.center.x - 0, speakBtn.center.y - CGRectGetMaxY(toVC.view.bounds));
-        
-        let radius = sqrt((finalPoint.x * finalPoint.x) + (finalPoint.y * finalPoint.y));
-        
-        let maskFinalBP = UIBezierPath.init(ovalInRect: CGRectInset(speakBtn.frame, -radius, -radius))
+        // MARK: toVC.view外围最大的圆
+        let radius = sqrt((toVC.view.frame.size.width * toVC.view.frame.size.width) + (speakBtn.center.y * speakBtn.center.y))
 
+        let maskFinalBP = UIBezierPath.init(arcCenter: speakBtn.center, radius: radius, startAngle: 0, endAngle: CGFloat(M_PI * 2), clockwise: true)
         
         let maskLayer = CAShapeLayer()
         maskLayer.path = maskFinalBP.CGPath;
@@ -46,6 +45,16 @@ class PingTransition: NSObject, UIViewControllerAnimatedTransitioning{
         maskLayerAnimation.duration = self.transitionDuration(transitionContext)
         maskLayerAnimation.delegate = self;
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
+        
+        UIView.animateWithDuration(self.transitionDuration(transitionContext)) { 
+            var toBtnF = toVC.speakOutBtn.frame
+            toBtnF.origin.y = toVC.speakOutBtn.frame.origin.y + 50
+            toVC.speakOutBtn.frame = toBtnF
+            
+            var fromBtnF = speakBtn.frame
+            fromBtnF.origin.y = speakBtn.frame.origin.y - 50
+            speakBtn.frame = fromBtnF
+        } 
     }
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {

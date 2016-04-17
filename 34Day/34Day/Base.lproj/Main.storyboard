@@ -79,8 +79,8 @@
                                     <constraint firstItem="Bnk-5v-0f5" firstAttribute="leading" secondItem="c3o-pG-R2p" secondAttribute="leading" constant="10" id="fIG-DF-HNb"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-ca-26P">
-                                <rect key="frame" x="147" y="363" width="306" height="252"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8K-ca-26P">
+                                <rect key="frame" x="275" y="400" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HLY-25-1vo"/>
                                     <constraint firstAttribute="width" constant="50" id="UCH-Kx-22h"/>
@@ -100,7 +100,7 @@
                             <constraint firstItem="hLt-Oo-p4k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="Eb5-Zo-tlf"/>
                             <constraint firstAttribute="trailing" secondItem="c3o-pG-R2p" secondAttribute="trailing" id="Mfw-8u-h9I"/>
                             <constraint firstAttribute="trailing" secondItem="VRR-xB-qto" secondAttribute="trailing" id="O0T-fF-4ny"/>
-                            <constraint firstItem="VRR-xB-qto" firstAttribute="top" secondItem="c8K-ca-26P" secondAttribute="bottom" constant="20" id="Uiv-uu-zhF"/>
+                            <constraint firstItem="VRR-xB-qto" firstAttribute="top" secondItem="c8K-ca-26P" secondAttribute="bottom" constant="84" id="Uiv-uu-zhF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s1Q-Cb-kHa" secondAttribute="bottom" constant="300" id="cA9-CN-Fag"/>
                             <constraint firstItem="c3o-pG-R2p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k4W-uq-4oX"/>
                             <constraint firstItem="s1Q-Cb-kHa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r5u-Fo-7fR"/>
@@ -119,6 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="714" y="385"/>
         </scene>
         <!--Speak Controller-->
         <scene sceneID="t1Q-hk-Sg4">
@@ -131,12 +132,32 @@
                     <view key="view" contentMode="scaleToFill" id="fCS-ES-9ej">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mid-C7-yWW">
+                                <rect key="frame" x="275" y="450" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3hn-X9-ay8"/>
+                                    <constraint firstAttribute="width" constant="50" id="7mL-76-hrU"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="voiceOut.png"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="wXk-Fw-oDY" eventType="touchUpInside" id="Eyf-M8-7MI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bhf-HN-Wsq" firstAttribute="top" secondItem="mid-C7-yWW" secondAttribute="bottom" constant="100" id="P5B-vb-L8l"/>
+                            <constraint firstItem="mid-C7-yWW" firstAttribute="centerX" secondItem="fCS-ES-9ej" secondAttribute="centerX" id="b05-cY-xoB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="speakOutBtn" destination="mid-C7-yWW" id="Dov-Sa-jY9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyd-TD-vLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="324"/>
+            <point key="canvasLocation" x="1151" y="385"/>
         </scene>
     </scenes>
     <resources>
@@ -144,5 +165,6 @@
         <image name="googleLogo.png" width="749" height="300"/>
         <image name="setting.png" width="32" height="32"/>
         <image name="voice.png" width="252" height="252"/>
+        <image name="voiceOut.png" width="72" height="72"/>
     </resources>
 </document>

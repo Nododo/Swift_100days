@@ -8,12 +8,15 @@
 
 import UIKit
 
-class SpeakController: UIViewController {
+class SpeakController: UIViewController, UIViewControllerTransitioningDelegate {
 
+    @IBOutlet weak var speakOutBtn: UIButton!
+
+    @IBAction func dismiss(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
