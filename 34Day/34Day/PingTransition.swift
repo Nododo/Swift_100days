@@ -46,15 +46,17 @@ class PingTransition: NSObject, UIViewControllerAnimatedTransitioning{
         maskLayerAnimation.delegate = self;
         maskLayer.addAnimation(maskLayerAnimation, forKey: "path")
         
+        // MARK: 这里两个按钮移动计算好麻烦。。 还要控制显示和隐藏  我这里计算应该是有问题的 大家注意下
+        
         UIView.animateWithDuration(self.transitionDuration(transitionContext)) { 
             var toBtnF = toVC.speakOutBtn.frame
             toBtnF.origin.y = toVC.speakOutBtn.frame.origin.y + 50
             toVC.speakOutBtn.frame = toBtnF
-            
-            var fromBtnF = speakBtn.frame
-            fromBtnF.origin.y = speakBtn.frame.origin.y - 50
-            speakBtn.frame = fromBtnF
-        } 
+//            
+//            var fromBtnF = speakBtn.frame
+//            fromBtnF.origin.y = speakBtn.frame.origin.y - 50
+//            speakBtn.frame = fromBtnF
+        }
     }
     
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {

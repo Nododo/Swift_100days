@@ -58,9 +58,9 @@ class PingInvertTransition: NSObject, UIViewControllerAnimatedTransitioning {
             fromBtnF.origin.y = speakOutBtn.frame.origin.y - 50
             speakOutBtn.frame = fromBtnF
             
-            var toBtnF = toVC.speakButton.frame
-            toBtnF.origin.y = toVC.speakButton.frame.origin.y - 50
-            toVC.speakButton.frame = fromBtnF
+//            var toBtnF = toVC.speakButton.frame
+//            toBtnF.origin.y = toVC.speakButton.frame.origin.y + 200
+//            toVC.speakButton.frame = fromBtnF
         }
 
     }
