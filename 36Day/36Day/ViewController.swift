@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(self.coverView)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,5 +24,12 @@ class ViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+
+    lazy var coverView: UIView = {
+        var tempView = UIView.init(frame: self.view.bounds)
+        tempView.backgroundColor = UIColor.redColor()
+        return tempView
+    }()
 }
 
