@@ -8,44 +8,65 @@
 
 import UIKit
 
-struct TransitionStruct {
-    var image: UIImage
-    var fromFrame: CGRect
-    var toFrame: CGRect
-    var fromCell: CustomCell
+enum UINavigationControllerState {
+    case Push;
+    case Pop
 }
 
+let screenW = UIScreen.mainScreen().bounds.size.width
+let screenH = UIScreen.mainScreen().bounds.size.height
+
 class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
-    var tStruct: TransitionStruct!
-    var tc: AnyObject!
+    
+    var state: UINavigationControllerState!
+    
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 2
+        return 0.5
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        tc = transitionContext
-        let containerView = transitionContext.containerView()
-        
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
-        let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
-        
-        var fromView = fromViewController?.view
-        var toView = toViewController?.view
-        //        imageView.frame = CGRectOffset(tStruct.fromFrame, 0, 64)
-        //        containerView?.addSubview(imageView)
-        
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
-            if self.tStruct.fromCell.frame == self.tStruct.toFrame {
-                self.tStruct.fromCell.frame = self.tStruct.toFrame
-            } else {
-                self.tStruct.fromCell.frame = self.tStruct.fromFrame
-            }
-        }) { (true) in
-            //                imageView.removeFromSuperview()
-            containerView?.addSubview(toView!)
-            let wasCancelled = transitionContext.transitionWasCancelled()
-            transitionContext.completeTransition(!wasCancelled)
+        if self.state == .Push {
+            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! CustomController
+            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! DetailController
+            let containerView = transitionContext.containerView()
+            let snapView = fromVC.selectedCell.snapshotViewAfterScreenUpdates(false)
+            let snapFrame = containerView?.convertRect(fromVC.selectedCell.iconView.frame, fromView: fromVC.selectedCell)
+            snapView.frame = snapFrame!
+            toVC.view.frame = transitionContext.finalFrameForViewController(toVC)
+            toVC.view.alpha = 0
+            fromVC.selectedCell.hidden = true
+            containerView?.addSubview(toVC.view)
+            containerView?.addSubview(snapView)
+            UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, options: .CurveEaseInOut, animations: {
+                //这里不知道用storyboard设置的约束 在动画开始的时候是 0 0 600 600 而动画结束后  约束是正确的  如果你知道原因  请告诉我  多谢
+                snapView.frame = CGRectMake(0, (screenH - screenW) / 2, screenW, screenW)
+                toVC.view.alpha = 1
+                }, completion: { (true) in
+                    fromVC.selectedCell.hidden = false
+                    toVC.bigPhoto.image = fromVC.selectedCell.iconView.image
+                    transitionContext.completeTransition(true)
+            })
+        } else {
+            let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! DetailController
+            let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! CustomController
+            let containerView = transitionContext.containerView()
+            let snapeView = fromVC.bigPhoto.snapshotViewAfterScreenUpdates(false)
+            let snapeFrame = containerView?.convertRect(fromVC.bigPhoto.frame, fromView: fromVC.view)
+            snapeView.frame = snapeFrame!
+            toVC.view.alpha = 0
+            containerView?.addSubview(toVC.view)
+            containerView?.addSubview(snapeView)
+            let finalFrame = containerView?.convertRect(toVC.selectedCell.iconView.frame, fromView: toVC.selectedCell)
+            
+            UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, options: .CurveEaseInOut, animations: {
+                snapeView.frame = finalFrame!
+                toVC.view.alpha = 1
+                }, completion: { (true) in
+                    snapeView.removeFromSuperview()
+                    transitionContext.completeTransition(true)
+            })
         }
-        
     }
 }
+
+

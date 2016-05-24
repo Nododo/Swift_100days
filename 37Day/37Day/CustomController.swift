@@ -19,16 +19,8 @@ class CustomController: UICollectionViewController, UINavigationControllerDelega
     
     var selectedCell: CustomCell!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
         self.navigationController?.delegate = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.registerClass(CustomCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,7 +55,6 @@ class CustomController: UICollectionViewController, UINavigationControllerDelega
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! CustomCell
         let photoName = String(format: "%d.png",indexPath.row)
         cell.iconView.image = UIImage(named: photoName)
-        cell.backgroundColor = UIColor.redColor()
         return cell
     }
     
@@ -72,15 +63,8 @@ class CustomController: UICollectionViewController, UINavigationControllerDelega
     }
     
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let screenW = UIScreen.mainScreen().bounds.size.width
-        let screenH = UIScreen.mainScreen().bounds.size.height
         let ct = CustomTransition()
-        let image = selectedCell.iconView.image
-        let fromeFrame = selectedCell.frame
-//        let detail = toVC as! DetailController
-        let toFrame = CGRectMake(0, (screenH - screenW) / 2, screenW, screenW)
-        let tt = TransitionStruct(image: image!, fromFrame: fromeFrame, toFrame: toFrame, fromCell: selectedCell)
-        ct.tStruct = tt
+        ct.state = .Push
         return ct
     }
 

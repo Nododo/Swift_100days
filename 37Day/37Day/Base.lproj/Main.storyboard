@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Pokemon-->
@@ -75,28 +74,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0.png" translatesAutoresizingMaskIntoConstraints="NO" id="Syk-Pt-H5b">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-pH-agw">
+                                <rect key="frame" x="0.0" y="-53" width="600" height="600"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" secondItem="Syk-Pt-H5b" secondAttribute="width" multiplier="1:1" id="p6I-bQ-7Fh"/>
+                                    <constraint firstAttribute="height" constant="375" id="g7n-Sv-XWa"/>
+                                    <constraint firstAttribute="width" constant="375" id="sA4-DX-uMx"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Syk-Pt-H5b" secondAttribute="trailing" id="2Oj-09-X7Y"/>
-                            <constraint firstItem="Syk-Pt-H5b" firstAttribute="centerY" secondItem="kDQ-c8-rUV" secondAttribute="centerY" id="6bY-CH-QKr"/>
-                            <constraint firstItem="Syk-Pt-H5b" firstAttribute="leading" secondItem="kDQ-c8-rUV" secondAttribute="leading" id="SvI-5p-GAg"/>
+                            <constraint firstItem="gRk-pH-agw" firstAttribute="centerY" secondItem="kDQ-c8-rUV" secondAttribute="centerY" id="IXe-b8-CaV"/>
+                            <constraint firstItem="gRk-pH-agw" firstAttribute="centerX" secondItem="kDQ-c8-rUV" secondAttribute="centerX" id="quw-r6-RpH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Raikou" id="xT0-sB-99C"/>
                     <connections>
-                        <outlet property="bigPhoto" destination="Syk-Pt-H5b" id="8Hv-eL-9rn"/>
+                        <outlet property="bigPhoto" destination="gRk-pH-agw" id="GPJ-53-LBI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OQ-4x-3je" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="364"/>
+            <point key="canvasLocation" x="1650" y="359"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDT-iX-Tdq">
@@ -117,7 +116,4 @@
             <point key="canvasLocation" x="258" y="263"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="0.png" width="440" height="440"/>
-    </resources>
 </document>
