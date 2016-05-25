@@ -13,8 +13,8 @@ enum UINavigationControllerState {
     case Pop
 }
 
-let screenW = UIScreen.mainScreen().bounds.size.width
-let screenH = UIScreen.mainScreen().bounds.size.height
+public let screenW = UIScreen.mainScreen().bounds.size.width
+public let screenH = UIScreen.mainScreen().bounds.size.height
 
 class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
@@ -42,28 +42,32 @@ class CustomTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 snapView.frame = CGRectMake(0, (screenH - screenW) / 2, screenW, screenW)
                 toVC.view.alpha = 1
                 }, completion: { (true) in
-                    fromVC.selectedCell.hidden = false
+                    snapView.removeFromSuperview()//昨天加边缘手势一直有问题, 原来是这里的图片没移除, 坑
+//                    fromVC.selectedCell.hidden = false 这里可以pop动画的时候再设置显示true
                     toVC.bigPhoto.image = fromVC.selectedCell.iconView.image
-                    transitionContext.completeTransition(true)
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
             })
         } else {
             let fromVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as! DetailController
             let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as! CustomController
             let containerView = transitionContext.containerView()
-            let snapeView = fromVC.bigPhoto.snapshotViewAfterScreenUpdates(false)
-            let snapeFrame = containerView?.convertRect(fromVC.bigPhoto.frame, fromView: fromVC.view)
-            snapeView.frame = snapeFrame!
-            toVC.view.alpha = 0
-            containerView?.addSubview(toVC.view)
-            containerView?.addSubview(snapeView)
+            fromVC.bigPhoto.hidden = true//大图隐藏
+            let snapView = fromVC.bigPhoto.snapshotViewAfterScreenUpdates(false)
+            let snapFrame = containerView?.convertRect(fromVC.bigPhoto.frame, fromView: fromVC.view)
+            snapView.frame = snapFrame!
+            toVC.view.frame = transitionContext.finalFrameForViewController(toVC)
+            toVC.view.alpha = 0.5
+            containerView!.addSubview(toVC.view)
+            containerView?.addSubview(snapView)
             let finalFrame = containerView?.convertRect(toVC.selectedCell.iconView.frame, fromView: toVC.selectedCell)
-            
             UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, options: .CurveEaseInOut, animations: {
-                snapeView.frame = finalFrame!
-                toVC.view.alpha = 1
+                snapView.frame = finalFrame!
+                toVC.view.alpha = 1.0
                 }, completion: { (true) in
-                    snapeView.removeFromSuperview()
-                    transitionContext.completeTransition(true)
+                    toVC.selectedCell.hidden = false//37行 之前隐藏了   现在显示
+                    fromVC.bigPhoto.hidden = false
+                    snapView.removeFromSuperview()
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
             })
         }
     }

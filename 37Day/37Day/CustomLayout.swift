@@ -9,7 +9,6 @@
 import UIKit
 
 class CustomLayout: UICollectionViewFlowLayout {
-    let screenW = UIScreen.mainScreen().bounds.size.width
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         itemSize = CGSizeMake(screenW / 2 - 0.5, screenW / 2)

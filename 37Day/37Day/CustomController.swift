@@ -22,6 +22,10 @@ class CustomController: UICollectionViewController, UINavigationControllerDelega
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.delegate = self
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

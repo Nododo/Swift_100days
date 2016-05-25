@@ -74,8 +74,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-pH-agw">
-                                <rect key="frame" x="0.0" y="-53" width="600" height="600"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gRk-pH-agw">
+                                <rect key="frame" x="113" y="113" width="375" height="375"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="375" id="g7n-Sv-XWa"/>
                                     <constraint firstAttribute="width" constant="375" id="sA4-DX-uMx"/>
@@ -83,6 +84,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="gRk-pH-agw" firstAttribute="centerY" secondItem="kDQ-c8-rUV" secondAttribute="centerY" id="IXe-b8-CaV"/>
                             <constraint firstItem="gRk-pH-agw" firstAttribute="centerX" secondItem="kDQ-c8-rUV" secondAttribute="centerX" id="quw-r6-RpH"/>
@@ -95,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5OQ-4x-3je" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="359"/>
+            <point key="canvasLocation" x="1509" y="263"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDT-iX-Tdq">
