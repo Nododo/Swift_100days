@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="00k-mx-sD7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Table View Controller-->
+        <scene sceneID="Nrz-M5-fTn">
+            <objects>
+                <tableViewController id="AOA-bK-9mP" customClass="MyTableViewController" customModule="_9Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="RdO-bZ-anY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7.png" id="3IA-7h-Mn2">
+                            <rect key="frame" x="0.0" y="64" width="600" height="375"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nododoT" rowHeight="100" id="l7B-Ta-Ted" customClass="MyTableViewCell" customModule="_9Day" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="467" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l7B-Ta-Ted" id="o4a-tX-70S">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yi1-Kh-6aR">
+                                            <rect key="frame" x="8" y="8" width="584" height="88"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B8y-yH-z3A" customClass="CustomLayout" customModule="_9Day" customModuleProvider="target">
+                                                <size key="itemSize" width="85" height="92"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nododoC" id="nhA-Fa-uWk" customClass="CustomCollectionViewCell" customModule="_9Day" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="-2" width="85" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="92"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GJW-Zq-7ep">
+                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="92"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="GJW-Zq-7ep" secondAttribute="bottom" id="6vl-7b-GGr"/>
+                                                        <constraint firstItem="GJW-Zq-7ep" firstAttribute="top" secondItem="nhA-Fa-uWk" secondAttribute="top" id="D2a-cs-DAA"/>
+                                                        <constraint firstItem="GJW-Zq-7ep" firstAttribute="leading" secondItem="nhA-Fa-uWk" secondAttribute="leading" id="MBo-RL-s8C"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GJW-Zq-7ep" secondAttribute="trailing" id="kaT-O0-PSt"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="iconView" destination="GJW-Zq-7ep" id="SJG-W7-tbI"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="l7B-Ta-Ted" id="inZ-WV-ol9"/>
+                                                <outlet property="delegate" destination="l7B-Ta-Ted" id="nrx-hj-9yR"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Yi1-Kh-6aR" secondAttribute="trailing" id="57a-Ud-gKE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Yi1-Kh-6aR" secondAttribute="bottom" id="H0I-8E-uCM"/>
+                                        <constraint firstItem="Yi1-Kh-6aR" firstAttribute="leading" secondItem="o4a-tX-70S" secondAttribute="leadingMargin" id="epV-wP-dWg"/>
+                                        <constraint firstItem="Yi1-Kh-6aR" firstAttribute="top" secondItem="o4a-tX-70S" secondAttribute="topMargin" id="hcv-lU-giq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mainCollectionView" destination="Yi1-Kh-6aR" id="OMI-Xp-HnB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AOA-bK-9mP" id="I93-hn-ZEy"/>
+                            <outlet property="delegate" destination="AOA-bK-9mP" id="eRH-yS-csU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZL9-vO-zKf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ft3-cH-GCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="udF-AZ-Gsf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="00k-mx-sD7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBi-Ii-6y3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AOA-bK-9mP" kind="relationship" relationship="rootViewController" id="92Z-3i-848"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTh-pj-yFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="7.png" width="440" height="440"/>
+    </resources>
+</document>
