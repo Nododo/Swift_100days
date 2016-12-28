@@ -1,4 +1,5 @@
 # Swift_100days
+## these works base on Swift 2.0,  if you just start learning swift， i suggest you should learn Swift from 3.0 ~ have fun!
 ## i start to learn swift by following [100 Days of Swift](http://samvlu.com/)
 ### this is the demos sorted by day, if i have time i will update this repo, but unregularly...
 ## if you have some question or opinion, pull request, or you can communicate with me with weibo below:
